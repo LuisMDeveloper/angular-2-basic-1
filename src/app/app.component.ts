@@ -3,9 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  template: `
+  <h1 class='title'>
+    {{title}}
+  </h1>
+  `,
+  styles: [`
+    .title {
+      color: blue;
+    }
+  `]
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Hello World!';
 }

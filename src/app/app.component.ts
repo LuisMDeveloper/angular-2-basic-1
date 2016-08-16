@@ -3,16 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'app-root',
-  template: `
-  <h1 class='title'>
-    {{title}}
-  </h1>
-  `,
-  styles: [`
-    .title {
-      color: blue;
-    }
-  `]
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
   title = 'Hello World!';

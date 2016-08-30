@@ -9,8 +9,8 @@ export class QuestionsService {
 
   constructor(private _http: Http) { }
 
-  setQuestion() {
-    const body = JSON.stringify({ text: "What?"});
+  setQuestion(question) {
+    const body = JSON.stringify({ text: question});
     return this._http.post(this.databaseURL+'/questions.json', body)
       .map(response => response.json());
   }

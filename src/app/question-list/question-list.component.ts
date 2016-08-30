@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
-  questions: Array<string> = [];
+  @Input() questions: Array<string> = [];
 
   constructor() { }
 
   ngOnInit() {
-    this.questions.push('What?');
+    /*this.questions.push('What?');
     this.questions.push('Why?');
     this.questions.push('Where?');
-    this.questions.push('When?');
+    this.questions.push('When?');*/
   }
 
 }

@@ -9,5 +9,11 @@ import { QuestionListComponent } from './question-list';
   directives: [ QuestionListComponent ]
 })
 export class AppComponent {
+  questions: Array<string> = [
+    'What?',
+    'Why?',
+    'Where?',
+    'When?'
+  ];
   title = 'Hello World!';
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../questions.service';
+import { Question } from '../question';
 
 @Component({
   moduleId: module.id,
@@ -16,7 +17,7 @@ export class AddQuestionComponent implements OnInit {
   }
 
   addQuestion(value) {
-    this._questionsService.setQuestion(value).subscribe(null, error => console.log(error));
+    this._questionsService.setQuestion(new Question(value, 'user')).subscribe(null, error => console.log(error));
     //console.log('Add a question: ' + value);
   }
 }

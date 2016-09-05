@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuestionListComponent } from './question-list';
 import { QuestionsService } from './questions.service';
 import { AddQuestionComponent } from './add-question';
+import { Question } from './question';
 
 @Component({
   moduleId: module.id,
@@ -13,7 +14,7 @@ import { AddQuestionComponent } from './add-question';
 })
 export class AppComponent implements OnInit {
   title = 'Hello World!';
-  questions: Array<any> = [];
+  questions: Array<Question> = [];
   
   constructor(private _questionsService: QuestionsService) {}
 
